@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Search, Bell, User } from "lucide-react";
+import { Search, Bell, User, Film } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,10 +24,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <img
+              <Film
                 className="h-8 w-auto"
-                src="/api/placeholder/100/50"
-                alt="Setflix"
               />
             </Link>
             <div className="hidden md:block ml-10">
@@ -49,18 +47,6 @@ export default function Navbar() {
                   className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   TV Shows
-                </Link>
-                <Link
-                  href="/new"
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  New & Popular
-                </Link>
-                <Link
-                  href="/mylist"
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  My List
                 </Link>
               </div>
             </div>
