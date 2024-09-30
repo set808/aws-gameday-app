@@ -88,7 +88,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2023 Netflix Clone. All rights reserved.</p>
+          <p>&copy; Uniflix. All rights reserved.</p>
         </div>
       </div>
     </footer>

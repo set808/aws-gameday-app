@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
-import { queryItems } from "@/lib/dynamo";
+import { queryByTypeAndReleaseDate } from "@/lib/dynamo";
 
 export async function GET() {
   try {
-    const shows = await queryItems("byType", "type = :type", {
-      ":type": "TVSHOW",
-    });
+    const shows = await queryByTypeAndReleaseDate("TVSHOW");
 
-    // Transform the items into a more usable format
     const transformedShows = shows.map((show) => ({
-      id: show.pk.split("#")[1],
+      id: show.id,
       title: show.title,
       posterPath: show.posterPath,
       voteAverage: show.voteAverage,

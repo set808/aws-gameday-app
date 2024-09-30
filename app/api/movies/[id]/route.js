@@ -1,28 +1,20 @@
 import { NextResponse } from "next/server";
-import { getItem } from "../../../../lib/dynamo";
+import { getItem } from "@/lib/dynamo";
 
 export async function GET(request, { params }) {
   try {
-    console.log("Fetching movie with ID:", params.id);
-
     if (!params.id) {
-      console.error("Movie ID is undefined or null");
       return NextResponse.json({ error: "Invalid movie ID" }, { status: 400 });
     }
 
-    const movie = await getItem({
-      pk: `MOVIE#${params.id}`,
-      sk: `MOVIE#${params.id}`,
-    });
-    console.log("Retrieved movie:", movie);
+    const movie = await getItem({ id: params.id });
 
     if (!movie) {
-      console.log("Movie not found for ID:", params.id);
       return NextResponse.json({ error: "Movie not found" }, { status: 404 });
     }
 
     const transformedMovie = {
-      id: movie.pk.split("#")[1],
+      id: movie.id,
       title: movie.title,
       backdropPath: movie.backdropPath,
       overview: movie.overview,
@@ -34,14 +26,10 @@ export async function GET(request, { params }) {
       voteCount: movie.voteCount,
     };
 
-    console.log("Transformed movie:", transformedMovie);
     return NextResponse.json(transformedMovie);
   } catch (error) {
-    console.error("Error fetching movie:", error);
-    // Log the full error object for more details
-    console.error(JSON.stringify(error, Object.getOwnPropertyNames(error)));
     return NextResponse.json(
-      { error: "Internal Server Error", details: error.message },
+      { error: "Internal Server Error" },
       { status: 500 }
     );
   }

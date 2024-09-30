@@ -10,7 +10,7 @@ export default function ContentRow({ title, items }) {
           <Link key={item.id} href={`/${item.contentType.toLowerCase()}s/${item.id}`} className="flex-shrink-0">
             <div className="w-48 h-72 relative rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
               <Image
-                src={`https://image.tmdb.org/t/p/w500${item.posterPath}`}
+                src={``}
                 alt={item.title}
                 layout="fill"
                 objectFit="cover"

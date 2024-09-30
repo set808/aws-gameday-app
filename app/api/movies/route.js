@@ -1,14 +1,12 @@
 import { NextResponse } from "next/server";
-import { queryItems } from "@/lib/dynamo";
+import { queryByTypeAndReleaseDate } from "../../../lib/dynamo";
 
 export async function GET() {
   try {
-    const movies = await queryItems("byType", "contentType = :contentType", {
-      ":contentType": "MOVIE",
-    });
+    const movies = await queryByTypeAndReleaseDate("MOVIE");
 
     const transformedMovies = movies.map((movie) => ({
-      id: movie.pk.split("#")[1],
+      id: movie.id,
       title: movie.title,
       posterPath: movie.posterPath,
       voteAverage: movie.voteAverage,

@@ -3,13 +3,21 @@ import { getItem } from "@/lib/dynamo";
 
 export async function GET(request, { params }) {
   try {
-    const show = await getItem({ pk: `TVSHOW#${params.id}`, title: params.id });
+    if (!params.id) {
+      return NextResponse.json(
+        { error: "Invalid TV show ID" },
+        { status: 400 }
+      );
+    }
+
+    const show = await getItem({ id: params.id });
+
     if (!show) {
       return NextResponse.json({ error: "TV show not found" }, { status: 404 });
     }
 
     const transformedShow = {
-      id: show.pk.split("#")[1],
+      id: show.id,
       title: show.title,
       backdropPath: show.backdropPath,
       overview: show.overview,

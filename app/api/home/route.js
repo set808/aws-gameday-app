@@ -1,31 +1,17 @@
 import { NextResponse } from "next/server";
-import { queryItems } from "../../../lib/dynamo";
+import { queryByTypeAndPopularity } from "@lib/dynamo";
 
 async function getFeaturedContent() {
   const contentTypes = ["MOVIE", "TVSHOW"];
   const randomType =
     contentTypes[Math.floor(Math.random() * contentTypes.length)];
 
-  const items = await queryItems(
-    "byPopularity",
-    "contentType = :contentType",
-    { ":contentType": randomType },
-    1,
-    true
-  );
-
-  // Return null if no items found
+  const items = await queryByTypeAndPopularity(randomType, 1);
   return items.length > 0 ? items[0] : null;
 }
 
 async function getPopularByType(contentType, limit = 10) {
-  return await queryItems(
-    "byPopularity",
-    "contentType = :contentType",
-    { ":contentType": contentType },
-    limit,
-    true
-  );
+  return await queryByTypeAndPopularity(contentType, limit);
 }
 
 export async function GET() {
@@ -39,7 +25,7 @@ export async function GET() {
     const transformItem = (item) =>
       item
         ? {
-            id: item.pk.split("#")[1],
+            id: item.id,
             title: item.title,
             backdropPath: item.backdropPath,
             posterPath: item.posterPath,

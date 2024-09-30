@@ -1,11 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getS3BackdropUrl } from '@/lib/s3'
 
 export default function Banner({ content }) {
-  return (
+
+  let backdropUrl = null;
+  if (content) {
+    backdropUrl = getS3BackdropUrl(content.backdropPath)
+  }
+
+  return ( content &&
     <div className="relative h-[80vh]">
       <Image
-        src={`https://image.tmdb.org/t/p/original${content.backdropPath}`}
+        src={`""`}
         alt={content.title}
         layout="fill"
         objectFit="cover"

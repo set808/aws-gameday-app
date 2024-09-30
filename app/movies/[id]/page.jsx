@@ -1,5 +1,7 @@
-import Image from 'next/image'
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
+import { getS3ImageUrl } from '@/lib/s3'
+
+// Page for the image optimization issue
 
 async function getMovie(id) {
   const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: 'no-store' })
@@ -11,27 +13,27 @@ async function getMovie(id) {
 
 export default async function MoviePage({ params }) {
   const movie = await getMovie(params.id)
+  const backdropUrl = await getS3ImageUrl(`backdrops/${movie.backdropPath}`);
+  const posterUrl = await getS3ImageUrl(`posters/${movie.posterPath}`);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="relative h-[40vh] mb-8">
-        <Image 
-          src={`https://image.tmdb.org/t/p/original${movie.backdropPath}`} 
+        <img
+          src={backdropUrl}
           alt={movie.title} 
-          layout="fill" 
-          objectFit="cover"
-          className="rounded-lg"
+          className="rounded-lg w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
       </div>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3">
-          <Image 
-            src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} 
+          <img 
+            src={posterUrl}
             alt={movie.title} 
             width={500} 
             height={750} 
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full"
           />
         </div>
         <div className="md:w-2/3">
@@ -48,16 +50,5 @@ export default async function MoviePage({ params }) {
         </div>
       </div>
     </div>
-  )
-}
-
-export function ErrorBoundary({ error }) {
-  return (
-    <Alert variant="destructive">
-      <AlertTitle>Error</AlertTitle>
-      <AlertDescription>
-        {error.message || 'An unexpected error occurred.'}
-      </AlertDescription>
-    </Alert>
   )
 }
