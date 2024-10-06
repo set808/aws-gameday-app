@@ -1,4 +1,5 @@
 "use strict";
+import { Config } from "sst/node/config";
 
 /**
  * New Relic agent configuration.
@@ -7,6 +8,8 @@
  * description of configuration variables and their potential values.
  */
 exports.config = {
+  app_name: "uniflix-app",
+  license_key: Config.NEW_RELIC_LICENSE_KEY,
   /**
    * This application_logging block shows the default configuration. That is,
    * it is not technically necessary; if it were omitted completely, we'd still

@@ -4,7 +4,7 @@ import { getS3ImageUrl } from '@/lib/s3'
 // Page for the image optimization issue
 
 async function getMovie(id) {
-  const res = await fetch(`http://localhost:3000/api/movies/${id}`, { cache: 'no-store' })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/movies/${id}`, { cache: 'no-store' })
   if (!res.ok) {
     throw new Error('Failed to fetch movie')
   }

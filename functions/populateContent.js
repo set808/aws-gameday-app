@@ -6,7 +6,7 @@ import {
 
 const content = [
   {
-    id: "MOVIE#001",
+    id: "MOVIE001",
     genre: "Fantasy",
     contentType: "MOVIE",
     backdropPath: "M001-backdrop.png",
@@ -20,7 +20,7 @@ const content = [
     voteCount: 15263,
   },
   {
-    id: "MOVIE#002",
+    id: "MOVIE002",
     genre: "Action",
     contentType: "MOVIE",
     backdropPath: "M002-backdrop.png",
@@ -34,7 +34,7 @@ const content = [
     voteCount: 12879,
   },
   {
-    id: "MOVIE#003",
+    id: "MOVIE003",
     genre: "Comedy",
     contentType: "MOVIE",
     backdropPath: "M003-backdrop.png",
@@ -48,7 +48,7 @@ const content = [
     voteCount: 20145,
   },
   {
-    id: "MOVIE#004",
+    id: "MOVIE004",
     genre: "Romance",
     contentType: "MOVIE",
     backdropPath: "M004-backdrop.png",
@@ -62,7 +62,7 @@ const content = [
     voteCount: 9876,
   },
   {
-    id: "MOVIE#005",
+    id: "MOVIE005",
     genre: "Sci-Fi",
     contentType: "MOVIE",
     backdropPath: "M005-backdrop.png",
@@ -76,7 +76,7 @@ const content = [
     voteCount: 14532,
   },
   {
-    id: "MOVIE#006",
+    id: "MOVIE006",
     genre: "Adventure",
     contentType: "MOVIE",
     backdropPath: "M006-backdrop.png",
@@ -90,7 +90,7 @@ const content = [
     voteCount: 11234,
   },
   {
-    id: "MOVIE#007",
+    id: "MOVIE007",
     genre: "Drama",
     contentType: "MOVIE",
     backdropPath: "M007-backdrop.png",
@@ -104,7 +104,7 @@ const content = [
     voteCount: 16789,
   },
   {
-    id: "MOVIE#008",
+    id: "MOVIE008",
     genre: "Thriller",
     contentType: "MOVIE",
     backdropPath: "M008-backdrop.png",
@@ -118,7 +118,7 @@ const content = [
     voteCount: 18901,
   },
   {
-    id: "MOVIE#009",
+    id: "MOVIE009",
     genre: "Family",
     contentType: "MOVIE",
     backdropPath: "M009-backdrop.png",
@@ -132,7 +132,7 @@ const content = [
     voteCount: 13567,
   },
   {
-    id: "MOVIE#010",
+    id: "MOVIE010",
     genre: "Musical",
     contentType: "MOVIE",
     backdropPath: "M010-backdrop.png",
@@ -146,7 +146,7 @@ const content = [
     voteCount: 17654,
   },
   {
-    id: "MOVIE#011",
+    id: "MOVIE011",
     genre: "Horror",
     contentType: "MOVIE",
     backdropPath: "M011-backdrop.png",
@@ -160,7 +160,7 @@ const content = [
     voteCount: 10567,
   },
   {
-    id: "MOVIE#012",
+    id: "MOVIE012",
     genre: "Mystery",
     contentType: "MOVIE",
     backdropPath: "M012-backdrop.png",
@@ -174,7 +174,7 @@ const content = [
     voteCount: 14321,
   },
   {
-    id: "MOVIE#013",
+    id: "MOVIE013",
     genre: "Animation",
     contentType: "MOVIE",
     backdropPath: "M013-backdrop.png",
@@ -188,7 +188,7 @@ const content = [
     voteCount: 12098,
   },
   {
-    id: "MOVIE#014",
+    id: "MOVIE014",
     genre: "Crime",
     contentType: "MOVIE",
     backdropPath: "M014-backdrop.png",
@@ -202,7 +202,7 @@ const content = [
     voteCount: 19876,
   },
   {
-    id: "MOVIE#015",
+    id: "MOVIE015",
     genre: "Superhero",
     contentType: "MOVIE",
     backdropPath: "M015-backdrop.png",
@@ -216,7 +216,7 @@ const content = [
     voteCount: 13542,
   },
   {
-    id: "MOVIE#016",
+    id: "MOVIE016",
     genre: "Fantasy",
     contentType: "MOVIE",
     backdropPath: "M016-backdrop.png",
@@ -230,7 +230,7 @@ const content = [
     voteCount: 21345,
   },
   {
-    id: "MOVIE#017",
+    id: "MOVIE017",
     genre: "Action",
     contentType: "MOVIE",
     backdropPath: "M017-backdrop.png",
@@ -244,7 +244,7 @@ const content = [
     voteCount: 15678,
   },
   {
-    id: "MOVIE#018",
+    id: "MOVIE018",
     genre: "Comedy",
     contentType: "MOVIE",
     backdropPath: "M018-backdrop.png",
@@ -258,7 +258,7 @@ const content = [
     voteCount: 16234,
   },
   {
-    id: "MOVIE#019",
+    id: "MOVIE019",
     genre: "Romance",
     contentType: "MOVIE",
     backdropPath: "M019-backdrop.png",
@@ -272,7 +272,7 @@ const content = [
     voteCount: 18765,
   },
   {
-    id: "MOVIE#020",
+    id: "MOVIE020",
     genre: "Sci-Fi",
     contentType: "MOVIE",
     backdropPath: "M020-backdrop.png",
@@ -286,7 +286,7 @@ const content = [
     voteCount: 20987,
   },
   {
-    id: "MOVIE#021",
+    id: "MOVIE021",
     genre: "Adventure",
     contentType: "MOVIE",
     backdropPath: "M021-backdrop.png",
@@ -300,7 +300,7 @@ const content = [
     voteCount: 19543,
   },
   {
-    id: "MOVIE#022",
+    id: "MOVIE022",
     genre: "Drama",
     contentType: "MOVIE",
     backdropPath: "M022-backdrop.png",
@@ -314,7 +314,7 @@ const content = [
     voteCount: 14256,
   },
   {
-    id: "MOVIE#023",
+    id: "MOVIE023",
     genre: "Thriller",
     contentType: "MOVIE",
     backdropPath: "M023-backdrop.png",
@@ -328,7 +328,7 @@ const content = [
     voteCount: 16789,
   },
   {
-    id: "MOVIE#024",
+    id: "MOVIE024",
     genre: "Family",
     contentType: "MOVIE",
     backdropPath: "M024-backdrop.png",
@@ -342,7 +342,7 @@ const content = [
     voteCount: 13987,
   },
   {
-    id: "MOVIE#025",
+    id: "MOVIE025",
     genre: "Musical",
     contentType: "MOVIE",
     backdropPath: "M025-backdrop.png",
@@ -356,7 +356,7 @@ const content = [
     voteCount: 15432,
   },
   {
-    id: "TVSHOW#001",
+    id: "TVSHOW001",
     genre: "Comedy",
     contentType: "TVSHOW",
     backdropPath: "T001-backdrop.png",
@@ -370,7 +370,7 @@ const content = [
     voteCount: 2345,
   },
   {
-    id: "TVSHOW#002",
+    id: "TVSHOW002",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T002-backdrop.png",
@@ -384,7 +384,7 @@ const content = [
     voteCount: 18934,
   },
   {
-    id: "TVSHOW#003",
+    id: "TVSHOW003",
     genre: "Sci-Fi",
     contentType: "TVSHOW",
     backdropPath: "T003-backdrop.png",
@@ -398,7 +398,7 @@ const content = [
     voteCount: 14567,
   },
   {
-    id: "TVSHOW#004",
+    id: "TVSHOW004",
     genre: "Crime",
     contentType: "TVSHOW",
     backdropPath: "T004-backdrop.png",
@@ -412,7 +412,7 @@ const content = [
     voteCount: 23456,
   },
   {
-    id: "TVSHOW#005",
+    id: "TVSHOW005",
     genre: "Fantasy",
     contentType: "TVSHOW",
     backdropPath: "T005-backdrop.png",
@@ -426,7 +426,7 @@ const content = [
     voteCount: 5678,
   },
   {
-    id: "TVSHOW#006",
+    id: "TVSHOW006",
     genre: "Comedy",
     contentType: "TVSHOW",
     backdropPath: "T006-backdrop.png",
@@ -440,7 +440,7 @@ const content = [
     voteCount: 8901,
   },
   {
-    id: "TVSHOW#007",
+    id: "TVSHOW007",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T007-backdrop.png",
@@ -454,7 +454,7 @@ const content = [
     voteCount: 7890,
   },
   {
-    id: "TVSHOW#008",
+    id: "TVSHOW008",
     genre: "Action",
     contentType: "TVSHOW",
     backdropPath: "T008-backdrop.png",
@@ -468,7 +468,7 @@ const content = [
     voteCount: 12345,
   },
   {
-    id: "TVSHOW#009",
+    id: "TVSHOW009",
     genre: "Mystery",
     contentType: "TVSHOW",
     backdropPath: "T009-backdrop.png",
@@ -482,7 +482,7 @@ const content = [
     voteCount: 9012,
   },
   {
-    id: "TVSHOW#010",
+    id: "TVSHOW010",
     genre: "Romance",
     contentType: "TVSHOW",
     backdropPath: "T010-backdrop.png",
@@ -496,7 +496,7 @@ const content = [
     voteCount: 6789,
   },
   {
-    id: "TVSHOW#011",
+    id: "TVSHOW011",
     genre: "Sitcom",
     contentType: "TVSHOW",
     backdropPath: "T011-backdrop.png",
@@ -510,7 +510,7 @@ const content = [
     voteCount: 11234,
   },
   {
-    id: "TVSHOW#012",
+    id: "TVSHOW012",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T012-backdrop.png",
@@ -524,7 +524,7 @@ const content = [
     voteCount: 10987,
   },
   {
-    id: "TVSHOW#013",
+    id: "TVSHOW013",
     genre: "Crime",
     contentType: "TVSHOW",
     backdropPath: "T013-backdrop.png",
@@ -538,7 +538,7 @@ const content = [
     voteCount: 5432,
   },
   {
-    id: "TVSHOW#014",
+    id: "TVSHOW014",
     genre: "Fantasy",
     contentType: "TVSHOW",
     backdropPath: "T014-backdrop.png",
@@ -552,7 +552,7 @@ const content = [
     voteCount: 8765,
   },
   {
-    id: "TVSHOW#015",
+    id: "TVSHOW015",
     genre: "Horror",
     contentType: "TVSHOW",
     backdropPath: "T015-backdrop.png",
@@ -566,7 +566,7 @@ const content = [
     voteCount: 9876,
   },
   {
-    id: "TVSHOW#016",
+    id: "TVSHOW016",
     genre: "Sci-Fi",
     contentType: "TVSHOW",
     backdropPath: "T016-backdrop.png",
@@ -580,7 +580,7 @@ const content = [
     voteCount: 7654,
   },
   {
-    id: "TVSHOW#017",
+    id: "TVSHOW017",
     genre: "Adventure",
     contentType: "TVSHOW",
     backdropPath: "T017-backdrop.png",
@@ -594,7 +594,7 @@ const content = [
     voteCount: 6543,
   },
   {
-    id: "TVSHOW#018",
+    id: "TVSHOW018",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T018-backdrop.png",
@@ -608,7 +608,7 @@ const content = [
     voteCount: 8765,
   },
   {
-    id: "TVSHOW#019",
+    id: "TVSHOW019",
     genre: "Comedy",
     contentType: "TVSHOW",
     backdropPath: "T019-backdrop.png",
@@ -622,7 +622,7 @@ const content = [
     voteCount: 7654,
   },
   {
-    id: "TVSHOW#020",
+    id: "TVSHOW020",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T020-backdrop.png",
@@ -636,7 +636,7 @@ const content = [
     voteCount: 8901,
   },
   {
-    id: "TVSHOW#021",
+    id: "TVSHOW021",
     genre: "Mystery",
     contentType: "TVSHOW",
     backdropPath: "T021-backdrop.png",
@@ -650,7 +650,7 @@ const content = [
     voteCount: 9876,
   },
   {
-    id: "TVSHOW#022",
+    id: "TVSHOW022",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T022-backdrop.png",
@@ -664,7 +664,7 @@ const content = [
     voteCount: 8765,
   },
   {
-    id: "TVSHOW#023",
+    id: "TVSHOW023",
     genre: "Sci-Fi",
     contentType: "TVSHOW",
     backdropPath: "T023-backdrop.png",
@@ -678,7 +678,7 @@ const content = [
     voteCount: 10987,
   },
   {
-    id: "TVSHOW#024",
+    id: "TVSHOW024",
     genre: "Comedy",
     contentType: "TVSHOW",
     backdropPath: "T024-backdrop.png",
@@ -692,7 +692,7 @@ const content = [
     voteCount: 7654,
   },
   {
-    id: "TVSHOW#025",
+    id: "TVSHOW025",
     genre: "Drama",
     contentType: "TVSHOW",
     backdropPath: "T025-backdrop.png",
@@ -706,6 +706,10 @@ const content = [
     voteCount: 9012,
   },
 ];
+
+const testFunction = (first) => {
+  second;
+};
 
 const client = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(client);

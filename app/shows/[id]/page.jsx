@@ -1,38 +1,41 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
+import { getS3PosterUrl, getS3BackdropUrl } from '@/lib/s3'
 
 async function getShow(id) {
-  const res = await fetch(`http://localhost:3000/api/shows/${id}`, { cache: 'no-store' })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shows/${id}`, { cache: 'no-store' })
   if (!res.ok) {
     throw new Error('Failed to fetch show')
-  }
+  };
   return res.json()
 }
 
 export default async function ShowPage({ params }) {
   const show = await getShow(params.id)
+  const backdropUrl = await getS3BackdropUrl(show.backdropPath)
+  const posterUrl = await getS3PosterUrl(show.posterPath)
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="relative h-[40vh] mb-8">
-        <Image 
-          src={`https://image.tmdb.org/t/p/original${show.backdropPath}`} 
-          alt={show.title} 
-          layout="fill" 
-          objectFit="cover"
-          className="rounded-lg"
-        />
+          <Image 
+            src={backdropUrl}
+            alt={show.title} 
+            layout="fill" 
+            objectFit="cover"
+            className="rounded-lg"
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
       </div>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3">
-          <Image 
-            src={`https://image.tmdb.org/t/p/w500${show.posterPath}`} 
-            alt={show.title} 
-            width={500} 
-            height={750} 
-            className="rounded-lg shadow-lg"
-          />
+            <Image 
+              src={posterUrl}
+              alt={show.title} 
+              width={500} 
+              height={750} 
+              className="rounded-lg shadow-lg"
+            />
         </div>
         <div className="md:w-2/3">
           <h1 className="text-4xl font-bold mb-4">{show.title}</h1>

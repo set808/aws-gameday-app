@@ -11,6 +11,18 @@ const nextConfig = {
     nrExternals(config);
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.s3.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.s3.*.amazonaws.com",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

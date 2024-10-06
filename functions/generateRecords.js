@@ -56,7 +56,7 @@ const batchWriteRecords = async (tableName, records) => {
 
 export const handler = async (event) => {
   const tableName = process.env.DYNAMODB_TABLE_NAME;
-  const recordsToGenerate = 1000;
+  const recordsToGenerate = 5000;
 
   let batchWriteItems = [];
   let totalRecordsWritten = 0;
