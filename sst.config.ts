@@ -1,4 +1,5 @@
 import { LayerVersion } from "aws-cdk-lib/aws-lambda";
+import ssm from "aws-cdk-lib/aws-ssm";
 import { SSTConfig } from "sst";
 import { NextjsSite } from "sst/constructs";
 import { Table, Bucket, Api, Script, Config } from "sst/constructs";
@@ -101,6 +102,11 @@ export default {
           },
         },
         onCreate: "functions/generateRecords.handler",
+      });
+
+      new ssm.StringParameter(stack, "BucketNameParameter", {
+        parameterName: "/uniflix/BucketName",
+        stringValue: bucket.bucketName,
       });
 
 
